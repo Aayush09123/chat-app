@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Aayush09123/chat-app#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
   }
 }
