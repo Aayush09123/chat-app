@@ -1,7 +1,12 @@
 import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
-app.listen(6000, () => {
-    console.log("Server is listening on port 6000");
+const port = process.env.PORT || 7000;
+
+app.listen(port, () => {
+    console.log(`Server is listening on port: ${port}`);
 })
