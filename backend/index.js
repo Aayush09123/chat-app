@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import authRouter from "./routes/auth.routes.js";
+import connectDB from "./db/index.js";
 
 dotenv.config();
 
@@ -10,6 +11,10 @@ const app = express();
 
 app.use("/api/auth", authRouter);
 
-app.listen(port, () => {
-    console.log(`Server is listening on port: ${port}`);
-});
+connectDB().then(() => {
+    app.listen(port, () => {
+        console.log(`Server is listening on port: ${port}`);
+    });
+}).catch((err) => {
+    console.log("MongoDB connection failed !! ", err)
+})
