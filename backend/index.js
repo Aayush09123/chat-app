@@ -9,6 +9,8 @@ const port = process.env.PORT || 7000;
 
 const app = express();
 
+app.use(express.json()) // to parse the incoming requests with JSON payloads
+
 app.use("/api/auth", authRouter);
 
 connectDB().then(() => {
