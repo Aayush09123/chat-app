@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import GenderCheckbox from './GenderCheckbox';
 
 const Signup = () => {
     return (
@@ -39,7 +40,9 @@ const Signup = () => {
                         <input type="password" placeholder='Enter Password' className='w-full input input-bordered h-10' />
                     </div>
 
-                    <a href="#" className='text-sm hover:underline hover:text-blue-600 mt-4 inline-block'>
+                    <GenderCheckbox />
+
+                    <a href="#" className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>
                         Already have an account?
                     </a>
 
