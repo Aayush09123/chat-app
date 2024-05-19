@@ -2,7 +2,7 @@
 import React from 'react';
 import { BiLogout } from "react-icons/bi";
 
-const Logoutbutton = () => {
+const LogoutButton = () => {
     return (
         <div className='mt-auto'>
             <BiLogout className="w-6 h-6 text-white cursor-pointer" />
@@ -10,4 +10,4 @@ const Logoutbutton = () => {
     )
 }
 
-export default Logoutbutton;
+export default LogoutButton;
