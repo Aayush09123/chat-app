@@ -4,6 +4,7 @@ import Login from './pages/login/Login';
 import Home from './pages/home/Home';
 import { Route, Routes } from 'react-router-dom';
 import Signup from './pages/signup/Signup';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
+      <Toaster />
     </div>
   )
 }
