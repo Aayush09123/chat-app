@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import useLogin from '../../hooks/useLogin';
 
 const Login = () => {
+    const { loading, login } = useLogin()
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        await login(username, password)
     }
 
     return (
@@ -50,8 +53,8 @@ const Login = () => {
                     </Link>
 
                     <div>
-                        <button className='btn btn-block btn-sm mt-4'>
-                            Login
+                        <button disabled={loading} className='btn btn-block btn-sm mt-4'>
+                            {loading ? <span className='loading loading-spinner'></span> : "Login"}
                         </button>
                     </div>
                 </form>
